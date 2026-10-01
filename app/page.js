@@ -4,7 +4,13 @@ import CTA from '../components/CTA';
 const services = [
   {
     title: 'Brand & Ad Design',
-    text: 'Attention-grabbing creative built for signs, screens, social media, print and digital campaigns.'
+    text: 'Attention-grabbing creative built for signs, screens, social media, print and digital campaigns.',
+    image: '/fidelity-wall-logo.png',
+    imageAlt: 'Fidelity Real Estate Group branding and advertising design created for a real-world display wall',
+    imageLabel: 'Fidelity Brand Design',
+    imageClass: 'service-card-image service-card-image-brand',
+    href: '/portfolio',
+    linkText: 'See Our Brand Work'
   },
   {
     title: 'D1 Community Advertising',

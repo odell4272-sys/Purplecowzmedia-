@@ -6,8 +6,9 @@ export default function D1Page() {
     <>
       <PageHero eyebrow="D1 Community Partners" title="Local Advertising That Lives Where Your Customers Already Are." text="A premium in-facility advertising program created to connect local businesses with D1 athletes, parents, families and visitors." />
 
-      <section className="section">
-        <div className="container feature-grid">
+      <section className="section d1-wall-showcase">
+        <div className="d1-wall-overlay" aria-hidden="true" />
+        <div className="container feature-grid d1-wall-content">
           <div>
             <span className="eyebrow">Complete Local Advertising Package</span>
             <h2>One Package. Multiple Ways To Be Seen.</h2>
@@ -21,7 +22,7 @@ export default function D1Page() {
               <li>Ongoing exposure to D1 athletes, parents, families and visitors</li>
             </ul>
           </div>
-          <div className="package-card">
+          <div className="package-card d1-glass-card">
             <span className="eyebrow">Community Partner</span>
             <h3>Build Recognition Where Relationships Happen.</h3>
             <p>Designed for local service businesses that want to stay visible to active families in the community.</p>
