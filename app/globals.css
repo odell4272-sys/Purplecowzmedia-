@@ -550,10 +550,20 @@ body {
 
 
 /* Fidelity brand example in the Home page service grid */
+
+.service-card-image-wrap-brand {
+  aspect-ratio: 1 / 1;
+  background: #07172e;
+}
+
+.service-card-image-wrap-brand .service-image-label,
+.service-card-image-wrap-brand .card-number-on-image {
+  background: rgba(7, 15, 30, .88);
+}
 .service-card-image-brand {
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  padding: 20px;
+  padding: 0;
   background:
     radial-gradient(circle at 50% 45%, rgba(30,74,150,.18), transparent 45%),
     linear-gradient(135deg, #111318, #050505);

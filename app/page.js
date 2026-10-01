@@ -5,10 +5,11 @@ const services = [
   {
     title: 'Brand & Ad Design',
     text: 'Attention-grabbing creative built for signs, screens, social media, print and digital campaigns.',
-    image: '/fidelity-wall-logo.png',
+    image: '/fidelity-brand-logo.png',
     imageAlt: 'Fidelity Real Estate Group branding and advertising design created for a real-world display wall',
     imageLabel: 'Fidelity Brand Design',
     imageClass: 'service-card-image service-card-image-brand',
+    imageWrapClass: 'service-card-image-wrap service-card-image-wrap-brand',
     href: '/portfolio',
     linkText: 'See Our Brand Work'
   },
@@ -99,7 +100,7 @@ export default function Home() {
               >
                 {service.image ? (
                   <>
-                    <div className="service-card-image-wrap">
+                    <div className={service.imageWrapClass || 'service-card-image-wrap'}>
                       <img
                         className={service.imageClass || 'service-card-image'}
                         src={service.image}
