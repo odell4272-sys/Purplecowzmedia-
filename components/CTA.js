@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 export default function CTA() {
   return (
-    <section className="cta-section">
+    <section className="cta-section cow-zone">
+      <div className="cow-fade cow-fade-cta" aria-hidden="true" />
       <div className="container cta-card">
         <div>
           <span className="eyebrow">Ready To Get Noticed?</span>

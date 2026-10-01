@@ -43,7 +43,8 @@ const services = [
 export default function Home() {
   return (
     <>
-      <section className="hero">
+      <section className="hero cow-zone hero-purple">
+        <div className="cow-fade cow-fade-hero" aria-hidden="true" />
         <div className="hero-glow glow-one" />
         <div className="hero-glow glow-two" />
         <div className="container hero-grid">
@@ -72,7 +73,9 @@ export default function Home() {
         <div>BRANDING • DIGITAL • TV • PRINT • WEB • COMMUNITY PARTNERSHIPS • SOCIAL MEDIA • CREATIVE •</div>
       </section>
 
-      <section className="section">
+      <section className="section purple-wash cow-zone">
+        <div className="cow-fade cow-fade-what-one" aria-hidden="true" />
+        <div className="cow-fade cow-fade-what-two" aria-hidden="true" />
         <div className="container">
           <div className="section-head split-head">
             <div>
@@ -122,7 +125,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-dark">
+      <section className="section section-dark cow-zone">
+        <div className="cow-fade cow-fade-d1" aria-hidden="true" />
         <div className="container feature-grid">
           <div className="feature-art">
             <img src="/purplecowz-shield.png" alt="PurpleCowz Media" />
@@ -143,7 +147,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section purple-wash-soft cow-zone">
+        <div className="cow-fade cow-fade-difference" aria-hidden="true" />
         <div className="container">
           <div className="section-head centered">
             <span className="eyebrow">The PurpleCowz Difference</span>
