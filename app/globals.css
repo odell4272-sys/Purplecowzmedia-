@@ -554,23 +554,28 @@ body {
 .service-card-image-wrap-brand {
   aspect-ratio: 1 / 1;
   background: #07172e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-card-image-wrap-brand .service-image-label,
 .service-card-image-wrap-brand .card-number-on-image {
   background: rgba(7, 15, 30, .88);
 }
+
+/* Keep the Fidelity logo slightly smaller inside the square so it has breathing room */
 .service-card-image-brand {
-  object-fit: cover;
+  width: 82%;
+  height: 82%;
+  object-fit: contain;
   object-position: center;
   padding: 0;
-  background:
-    radial-gradient(circle at 50% 45%, rgba(30,74,150,.18), transparent 45%),
-    linear-gradient(135deg, #111318, #050505);
+  background: transparent;
 }
 
 .service-card.has-image:hover .service-card-image-brand {
-  transform: scale(1.02);
+  transform: scale(1.025);
 }
 
 /* D1 Community Partners page: real wall photo used as a full section backdrop */
