@@ -48,8 +48,6 @@ const projects = [
   {
     title: 'Real Estate Marketing',
     category: 'Property Marketing',
-    image: '/PCz3.png',
-    imageClass: 'contain light',
     text: 'Property-focused marketing and information pieces that organize the details and help present a real estate opportunity clearly.'
   }
 ];
@@ -103,11 +101,14 @@ export default function PortfolioPage() {
           <div className="portfolio-project-grid">
             {projects.map((project) => (
               <article className="portfolio-project-card" key={project.title}>
-                <div className={`portfolio-project-image ${project.imageClass}`}>
-                  <img src={project.image} alt={project.title} />
-                  <span className="portfolio-category">{project.category}</span>
-                </div>
+                {project.image && (
+                  <div className={`portfolio-project-image ${project.imageClass}`}>
+                    <img src={project.image} alt={project.title} />
+                    <span className="portfolio-category">{project.category}</span>
+                  </div>
+                )}
                 <div className="portfolio-project-body">
+                  {!project.image && <span className="eyebrow">{project.category}</span>}
                   <h3>{project.title}</h3>
                   <p>{project.text}</p>
                 </div>
