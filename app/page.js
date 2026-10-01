@@ -9,18 +9,20 @@ const services = [
   {
     title: 'D1 Community Advertising',
     text: 'Premium local exposure through wall plaques, rotating TV advertising and printed promotional materials.',
-    image: '/d1-community-advertising.png',
-    imageAlt: 'D1 Community Partner wall and TV advertising example',
-    imageLabel: 'D1 Community Partners',
+    image: '/d1-community-wall-real.jpg',
+    imageAlt: 'D1 Community Partners advertising wall with printed business displays and rotating TV advertising',
+    imageLabel: 'Real D1 Wall Display',
+    imageClass: 'service-card-image service-card-image-d1',
     href: '/d1-community-partners',
     linkText: 'See The D1 Program'
   },
   {
     title: 'Websites & Landing Pages',
     text: 'Clean, conversion-focused websites that make your business look established, professional and easy to contact.',
-    image: '/kr-pool-homepage.png',
-    imageAlt: 'K&R Pool Repair website homepage',
-    imageLabel: 'Website Project',
+    image: '/kr-pool-homepage-real.png',
+    imageAlt: 'K&R Pool Repair website homepage designed by PurpleCowz Media',
+    imageLabel: 'K&R Pool Repair Website',
+    imageClass: 'service-card-image service-card-image-website',
     href: '/contact',
     linkText: 'Build My Website'
   },
@@ -90,7 +92,7 @@ export default function Home() {
                   <>
                     <div className="service-card-image-wrap">
                       <img
-                        className="service-card-image"
+                        className={service.imageClass || 'service-card-image'}
                         src={service.image}
                         alt={service.imageAlt}
                       />

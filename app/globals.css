@@ -310,3 +310,19 @@ input:focus, textarea:focus, select:focus { border-color: var(--purple); box-sha
     min-height: 0;
   }
 }
+
+/* Exact project images supplied for the What We Do service cards */
+.service-card-image-d1 {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.service-card-image-website {
+  object-fit: contain;
+  object-position: center center;
+  background: #10243a;
+}
+
+.service-card.has-image:hover .service-card-image-website {
+  transform: scale(1.018);
+}
