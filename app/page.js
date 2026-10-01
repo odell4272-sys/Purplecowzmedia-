@@ -33,7 +33,7 @@ export default function Home() {
           </div>
           <div className="hero-logo-wrap">
             <div className="logo-halo" />
-            <img className="hero-logo" src="/purplecowz-logo.png" alt="PurpleCowz Media logo" />
+            <img className="hero-logo" src="/purplecowz-shield.png" alt="PurpleCowz Media logo" />
           </div>
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function Home() {
       <section className="section section-dark">
         <div className="container feature-grid">
           <div className="feature-art">
-            <img src="/purplecowz-logo.png" alt="PurpleCowz Media" />
+            <img src="/purplecowz-shield.png" alt="PurpleCowz Media" />
           </div>
           <div>
             <span className="eyebrow">D1 Community Partners</span>

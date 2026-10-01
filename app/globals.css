@@ -185,3 +185,41 @@ input:focus, textarea:focus, select:focus { border-color: var(--purple); box-sha
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; }
 }
+
+/* Portfolio image cards */
+.portfolio-image-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .3s ease;
+}
+
+.portfolio-card:hover .portfolio-image {
+  transform: scale(1.025);
+}
+
+.portfolio-label {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(7, 7, 7, .82);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  backdrop-filter: blur(8px);
+}

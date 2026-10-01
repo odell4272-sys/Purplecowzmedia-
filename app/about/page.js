@@ -7,7 +7,7 @@ export default function AboutPage() {
       <PageHero eyebrow="About PurpleCowz" title="Because Nobody Remembers The Cow That Looked Like Every Other Cow." text="PurpleCowz Media was built around a simple idea: attention matters. If your business looks exactly like everyone else, customers have no reason to remember it." />
       <section className="section">
         <div className="container feature-grid">
-          <div className="feature-art logo-panel"><img src="/purplecowz-logo.png" alt="PurpleCowz Media" /></div>
+          <div className="feature-art logo-panel"><img src="/purplecowz-shield.png" alt="PurpleCowz Media" /></div>
           <div>
             <span className="eyebrow">Our Point Of View</span>
             <h2>Different Gets Remembered.</h2>

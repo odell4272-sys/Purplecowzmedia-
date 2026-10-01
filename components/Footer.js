@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div>
-          <img className="footer-logo" src="/purplecowz-logo.png" alt="PurpleCowz Media" />
+          <img className="footer-logo" src="/purplecowz-shield.png" alt="PurpleCowz Media" />
           <p className="muted">Bold creative. Local visibility. Marketing designed to make your business impossible to ignore.</p>
         </div>
         <div>

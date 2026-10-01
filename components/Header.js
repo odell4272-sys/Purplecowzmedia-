@@ -13,7 +13,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container nav-wrap">
         <Link className="brand" href="/" aria-label="PurpleCowz Media home">
-          <img src="/purplecowz-logo.png" alt="PurpleCowz Media" />
+          <img src="/purplecowz-shield.png" alt="PurpleCowz Media" />
           <span>PurpleCowz Media</span>
         </Link>
         <nav className="nav-links" aria-label="Primary navigation">

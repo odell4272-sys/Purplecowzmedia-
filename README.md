@@ -21,7 +21,7 @@ Then open http://localhost:3000
 
 ## Easy edits
 
-- Logo: `public/purplecowz-logo.png`
+- Logo: `public/purplecowz-shield.png`
 - Main site copy: files inside `app/`
 - Global colors/layout: `app/globals.css`
 - Navigation: `components/Header.js`
