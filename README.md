@@ -27,3 +27,9 @@ Then open http://localhost:3000
 - Navigation: `components/Header.js`
 
 The contact form is currently a polished front-end form. Connect it to Formspree, Resend, HubSpot, GoHighLevel, or your preferred CRM when ready.
+
+## Home page service images
+
+- `public/d1-community-advertising.png` is used for the D1 Community Advertising card.
+- `public/kr-pool-homepage.png` is used for the Websites & Landing Pages card.
+- The current K&R image is a temporary placeholder. Replace that file with the actual K&R Pool Repair homepage screenshot using the exact same filename and no code changes are required.

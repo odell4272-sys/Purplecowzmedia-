@@ -223,3 +223,90 @@ input:focus, textarea:focus, select:focus { border-color: var(--purple); box-sha
   letter-spacing: .16em;
   backdrop-filter: blur(8px);
 }
+
+/* Visual service cards on the Home page */
+.service-card.has-image {
+  padding: 0;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-image-wrap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #090909;
+  border-bottom: 1px solid var(--line);
+}
+
+.service-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.service-card.has-image:hover .service-card-image {
+  transform: scale(1.035);
+  filter: saturate(1.05) contrast(1.03);
+}
+
+.service-card-body {
+  padding: 24px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.service-card.has-image h3 {
+  margin: 0 0 10px;
+}
+
+.service-card.has-image p {
+  margin-bottom: 18px;
+}
+
+.service-image-label,
+.card-number-on-image {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(7,7,7,.82);
+  border: 1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(8px);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.service-image-label {
+  left: 14px;
+  color: #fff;
+}
+
+.card-number-on-image {
+  left: auto;
+  right: 14px;
+  color: var(--purple-2);
+}
+
+.service-card-link {
+  margin-top: auto;
+  color: var(--purple-2);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.service-card-link:hover {
+  color: #d7a8ff;
+}
+
+@media (max-width: 640px) {
+  .service-card.has-image {
+    min-height: 0;
+  }
+}

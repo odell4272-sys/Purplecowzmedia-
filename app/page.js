@@ -2,12 +2,40 @@ import Link from 'next/link';
 import CTA from '../components/CTA';
 
 const services = [
-  ['Brand & Ad Design', 'Attention-grabbing creative built for signs, screens, social media, print and digital campaigns.'],
-  ['D1 Community Advertising', 'Premium local exposure through wall plaques, rotating TV advertising and printed promotional materials.'],
-  ['Websites & Landing Pages', 'Clean, conversion-focused websites that make your business look established and easy to contact.'],
-  ['Social & Digital Media', 'Campaign creative sized and adapted for Instagram, Facebook, TikTok, YouTube and more.'],
-  ['Print & Display Advertising', 'Posters, plaques, flyers, brochures and physical marketing pieces designed to look polished in the real world.'],
-  ['Local Business Marketing', 'Practical campaigns focused on visibility, leads and staying top-of-mind in your community.']
+  {
+    title: 'Brand & Ad Design',
+    text: 'Attention-grabbing creative built for signs, screens, social media, print and digital campaigns.'
+  },
+  {
+    title: 'D1 Community Advertising',
+    text: 'Premium local exposure through wall plaques, rotating TV advertising and printed promotional materials.',
+    image: '/d1-community-advertising.png',
+    imageAlt: 'D1 Community Partner wall and TV advertising example',
+    imageLabel: 'D1 Community Partners',
+    href: '/d1-community-partners',
+    linkText: 'See The D1 Program'
+  },
+  {
+    title: 'Websites & Landing Pages',
+    text: 'Clean, conversion-focused websites that make your business look established, professional and easy to contact.',
+    image: '/kr-pool-homepage.png',
+    imageAlt: 'K&R Pool Repair website homepage',
+    imageLabel: 'Website Project',
+    href: '/contact',
+    linkText: 'Build My Website'
+  },
+  {
+    title: 'Social & Digital Media',
+    text: 'Campaign creative sized and adapted for Instagram, Facebook, TikTok, YouTube and more.'
+  },
+  {
+    title: 'Print & Display Advertising',
+    text: 'Posters, plaques, flyers, brochures and physical marketing pieces designed to look polished in the real world.'
+  },
+  {
+    title: 'Local Business Marketing',
+    text: 'Practical campaigns focused on visibility, leads and staying top-of-mind in your community.'
+  }
 ];
 
 export default function Home() {
@@ -51,12 +79,41 @@ export default function Home() {
             </div>
             <p>We combine strong design with real-world placement so your message does more than look good — it gets seen.</p>
           </div>
+
           <div className="card-grid three-col">
-            {services.map(([title, text], i) => (
-              <article className="service-card" key={title}>
-                <span className="card-number">0{i + 1}</span>
-                <h3>{title}</h3>
-                <p>{text}</p>
+            {services.map((service, i) => (
+              <article
+                className={`service-card ${service.image ? 'has-image' : ''}`}
+                key={service.title}
+              >
+                {service.image ? (
+                  <>
+                    <div className="service-card-image-wrap">
+                      <img
+                        className="service-card-image"
+                        src={service.image}
+                        alt={service.imageAlt}
+                      />
+                      <span className="service-image-label">{service.imageLabel}</span>
+                      <span className="card-number card-number-on-image">0{i + 1}</span>
+                    </div>
+                    <div className="service-card-body">
+                      <h3>{service.title}</h3>
+                      <p>{service.text}</p>
+                      {service.href && (
+                        <Link className="service-card-link" href={service.href}>
+                          {service.linkText} →
+                        </Link>
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <span className="card-number">0{i + 1}</span>
+                    <h3>{service.title}</h3>
+                    <p>{service.text}</p>
+                  </>
+                )}
               </article>
             ))}
           </div>
