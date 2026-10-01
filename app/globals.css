@@ -461,10 +461,10 @@ body {
   z-index: 0;
   width: 430px;
   height: 360px;
-  background-image: url('/cow-fade-clean.png');
+  background-image: url('/cow-fade.png');
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: right center;
+  background-size: auto 100%;
   opacity: .105;
   pointer-events: none;
   mix-blend-mode: screen;
