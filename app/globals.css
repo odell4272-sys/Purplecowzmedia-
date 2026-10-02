@@ -657,20 +657,21 @@ body {
   flex: 0 0 auto;
 }
 
-/* Fidelity logo stays smaller INSIDE the same-size image window. */
+/* Fidelity logo fills the same-size image window like the other cards.
+   Background matches the logo PNG's own navy (#010f26) so its square edges disappear. */
 .service-card-image-wrap-brand {
-  background: #07172e;
+  background: #010f26;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 26px;
+  padding: 0;
 }
 
 .service-card-image-brand {
-  width: 72%;
-  height: 72%;
-  max-width: 290px;
-  max-height: 170px;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
   object-position: center;
   padding: 0;
@@ -697,14 +698,6 @@ body {
     min-height: 0;
   }
 
-  .service-card-image-wrap-brand {
-    padding: 14px 20px;
-  }
-
-  .service-card-image-brand {
-    width: 68%;
-    height: 68%;
-  }
 }
 
 /* =========================================================
