@@ -146,7 +146,11 @@ input, textarea, select { width: 100%; background: #090909; color: white; border
 input:focus, textarea:focus, select:focus { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(141,45,226,.1); }
 .success-box { padding: 40px; border: 1px solid rgba(185,108,255,.28); border-radius: 22px; background: #0f0f0f; }
 .success-box h2 { font-size: 44px; margin-bottom: 10px; }
-.success-box p { color: var(--muted); }
+  .success-box p { color: var(--muted); }
+  .form-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+  .form-error { margin: 0; padding: 14px 16px; border: 1px solid rgba(185,108,255,.35); border-radius: 10px; background: rgba(141,45,226,.08); color: #e6d6ff; font-size: 14px; line-height: 1.5; }
+  .form-error a { color: var(--purple-2); font-weight: 800; text-decoration: underline; }
+  .contact-form .btn:disabled { opacity: .6; cursor: progress; }
 
 .footer { border-top: 1px solid var(--line); padding: 60px 0 24px; background: #050505; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr .7fr .7fr; gap: 70px; }
