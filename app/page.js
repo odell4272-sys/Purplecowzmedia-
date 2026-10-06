@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import CTA from '../components/CTA';
+import PurpleCowzConversionSections from '../components/PurpleCowzConversionSections';
 
 const services = [
   {
@@ -171,7 +171,7 @@ export default function Home() {
         </div>
       </section>
 
-      <CTA />
+      <PurpleCowzConversionSections />
     </>
   );
 }
