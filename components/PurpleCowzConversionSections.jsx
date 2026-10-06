@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 
-const LEAD_EMAIL = 'purplecowzmedia@gmail.com';
 
 function CheckIcon({ size = 14 }) {
   return (
@@ -92,34 +91,12 @@ export default function PurpleCowzConversionSections() {
         body: JSON.stringify(payload)
       });
 
-      if (response.status === 503) {
-        openEmailFallback(payload);
-        setStep(3);
-        setStatus('success');
-        return;
-      }
       if (!response.ok) throw new Error('Submission failed');
       setStep(3);
       setStatus('success');
     } catch (error) {
       setStatus('error');
     }
-  };
-
-  // Until Resend env vars are configured, the API returns 503 and we hand off to the visitor's email app.
-  const openEmailFallback = (payload) => {
-    const subject = `PurpleCowz Media Project Request - ${payload.business || payload.name}`;
-    const body = [
-      `Name: ${payload.name || ''}`,
-      `Business: ${payload.business || ''}`,
-      `Email: ${payload.email || ''}`,
-      `Phone: ${payload.phone || ''}`,
-      `Services: ${payload.services.join(', ')}`,
-      '',
-      'Project Details:',
-      payload.message || ''
-    ].join('\n');
-    window.location.href = `mailto:${LEAD_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
