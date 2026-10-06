@@ -6,6 +6,13 @@ const MAX = { name: 120, business: 160, email: 200, phone: 40, message: 5000, se
 
 const clean = (value, max) => String(value ?? '').trim().slice(0, max);
 
+// Resend can't send from free mailbox domains; use its shared sender until a custom domain is verified.
+const FREE_MAIL_DOMAINS = ['gmail.com', 'googlemail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'icloud.com', 'aol.com'];
+const getSenderAddress = (configured) => {
+  const domain = String(configured).split('@')[1]?.toLowerCase();
+  return !domain || FREE_MAIL_DOMAINS.includes(domain) ? 'onboarding@resend.dev' : configured;
+};
+
 export async function POST(request) {
   let body;
   try {
@@ -34,7 +41,7 @@ export async function POST(request) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const { error } = await resend.emails.send({
-      from: `PurpleCowz Website <${process.env.CONTACT_FROM_EMAIL}>`,
+      from: `PurpleCowz Website <${getSenderAddress(process.env.CONTACT_FROM_EMAIL)}>`,
       to: process.env.CONTACT_TO_EMAIL || DEFAULT_TO_EMAIL,
       replyTo: email,
       subject: `New PurpleCowz Lead: ${name}${business ? ` - ${business}` : ''}`,
