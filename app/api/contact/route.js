@@ -6,11 +6,12 @@ const MAX = { name: 120, business: 160, email: 200, phone: 40, message: 5000, se
 
 const clean = (value, max) => String(value ?? '').trim().slice(0, max);
 
-// Resend can't send from free mailbox domains; use its shared sender until a custom domain is verified.
+// Resend can't send from free mailbox domains, so fall back to the domain verified in Resend.
+const VERIFIED_SENDER = 'marketing@purplecowz.com';
 const FREE_MAIL_DOMAINS = ['gmail.com', 'googlemail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'icloud.com', 'aol.com'];
 const getSenderAddress = (configured) => {
-  const domain = String(configured).split('@')[1]?.toLowerCase();
-  return !domain || FREE_MAIL_DOMAINS.includes(domain) ? 'onboarding@resend.dev' : configured;
+  const domain = String(configured ?? '').split('@')[1]?.toLowerCase();
+  return !domain || FREE_MAIL_DOMAINS.includes(domain) ? VERIFIED_SENDER : configured;
 };
 
 export async function POST(request) {
@@ -34,7 +35,7 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
   }
 
-  if (!process.env.RESEND_API_KEY || !process.env.CONTACT_FROM_EMAIL) {
+  if (!process.env.RESEND_API_KEY) {
     return NextResponse.json({ error: 'not_configured' }, { status: 503 });
   }
 
