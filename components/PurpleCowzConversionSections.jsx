@@ -339,6 +339,49 @@ export default function PurpleCowzConversionSections() {
           .pc-stepper { padding: 20px 16px; }
           .pc-final-inner { flex-direction: column; align-items: flex-start; }
           .pc-light-btn { width: 100%; }
+
+          .pc-wrap { width: calc(100% - 32px); }
+          h2 { font-size: clamp(32px, 9vw, 40px); line-height: 1.05; }
+          p { font-size: 16px; }
+          .pc-eyebrow { font-size: 11px; letter-spacing: .14em; }
+          .pc-process-section, .pc-faq-section, .pc-contact-section { padding: 64px 0; }
+          .pc-heading.center { margin-bottom: 32px; }
+
+          .pc-trust-grid > div { padding: 20px 2px; }
+          .pc-trust-grid > div:last-child { border-bottom: 0; }
+          .pc-trust-grid strong { font-size: 16px; }
+          .pc-trust-grid span { font-size: 14px; }
+
+          .pc-process-grid { gap: 14px; }
+          .pc-process-grid article { min-height: 0; padding: 26px 22px; border-radius: 20px; }
+          .pc-process-grid h3 { font-size: 21px; margin: 30px 0 8px; }
+          .pc-process-grid p { font-size: 15px; }
+
+          .pc-contact-grid, .pc-faq-grid { gap: 32px; }
+          .pc-contact-copy > p { margin: 18px 0; }
+          .pc-contact-points { margin-top: 22px; }
+          .pc-contact-points div { font-size: 16px; }
+
+          .pc-form-card { border-radius: 22px; }
+          .pc-stepper i { margin: 0 6px 20px; }
+          .pc-step-panel h3 { font-size: 24px; }
+          .pc-service-select { margin: 20px 0 24px; gap: 10px; }
+          .pc-service-select button { min-height: 56px; font-size: 16px; padding: 12px 16px; }
+          .pc-primary-btn, .pc-secondary-btn, .pc-light-btn { min-height: 56px; font-size: 16px; }
+          .pc-fields { margin: 20px 0; }
+          .pc-fields label { font-size: 14px; }
+          .pc-fields input, .pc-fields textarea { font-size: 16px; min-height: 52px; }
+          .pc-back { min-height: 44px; margin-bottom: 8px; font-size: 16px; }
+          .pc-success { padding-top: 40px; padding-bottom: 40px; }
+
+          .pc-faq-grid .pc-heading p { margin: 14px 0 22px; }
+          .pc-faq-grid .pc-secondary-btn { width: 100%; }
+          .pc-faq-list summary { align-items: center; min-height: 60px; padding: 16px 18px; font-size: 16px; line-height: 1.4; }
+          .pc-faq-list details p { padding: 0 18px 18px; font-size: 15px; }
+
+          .pc-final-cta { padding: 52px 0; }
+          .pc-final-cta h2 { font-size: clamp(36px, 10vw, 44px); }
+          .pc-final-inner { gap: 24px; }
         }
       `}</style>
     </>

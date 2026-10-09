@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import MobileNav from './MobileNav';
 
 const links = [
   ['Services', '/services'],
@@ -22,6 +23,7 @@ export default function Header() {
           ))}
         </nav>
         <Link className="btn btn-small" href="/contact">Get Noticed</Link>
+        <MobileNav links={links} />
       </div>
     </header>
   );
